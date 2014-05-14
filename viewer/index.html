@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 	<title>Utah Newspapers Data Viewer</title>
 </head>
 <body>
-	<table>
+	<h1>Utah Newspapers</h1>
+	<table cellspacing="0" cellpadding="0">
 	  <thead>
 	    <tr>
 	      <th class="title-cell">Title</th>
@@ -353,7 +357,7 @@
 	      <td class="to-cell">Nov 1867</td>
 	    </tr>
 	    <tr>
-	      <td class="title-cell">Univ. of Utah Chronicle</td>
+	      <td class="title-cell">University of Utah Chronicle</td>
 	      <td class="county-cell">Salt Lake</td>
 	      <td class="from-cell">Dec 1892</td>
 	      <td class="to-cell">Oct 1963</td>
@@ -528,5 +532,10 @@
 	    </tr>
 	  </tbody>
 	</table>
+	<script>
+		$(document).ready(function() { 
+    	$("table").tablesorter({widthFixed: true, widgets: ['zebra']}).tablesorterPager({container: $("#pager")}) 
+		});
+	</script>
 </body>
 </html>
