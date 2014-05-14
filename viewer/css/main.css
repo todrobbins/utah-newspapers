@@ -1,0 +1,27 @@
+table {
+	padding: 1em;
+	width: 100%;
+}
+
+thead {
+	text-align: left;
+}
+
+thead tr {
+	border-bottom: 1px solid gray;
+}
+
+th {
+	background: #cee;
+	padding: .4em;
+	margin: 0;
+	border: 0;
+}
+
+td {
+	padding: .4em;
+}
+
+tr:nth-child(2n) {
+	background: #eee;
+}
