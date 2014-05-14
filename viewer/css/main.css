@@ -34,6 +34,7 @@ th {
 }
 
 th:hover {
+	background: #aee;
 	cursor: pointer;
 }
 
