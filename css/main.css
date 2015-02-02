@@ -16,17 +16,10 @@ h1 {
 table {
 	padding: 1em;
 	width: 100%;
-}
-
-thead {
 	text-align: left;
 }
 
-thead tr {
-	border-bottom: 1px solid gray;
-}
-
-th {
+th.header {
 	background: #cee;
 	padding: .6em;
 	margin: 0;
@@ -42,17 +35,13 @@ td {
 	padding: .6em;
 }
 
-td.title-cell {
-	font-style: italic;
-}
-
 tr:nth-child(2n) {
 	background: #eee;
 }
 
 @media screen and (max-width: 640px) {
 	html {
-		font-size: 12px;
+		font-size: 11px;
 	}
 
 	h1 {
