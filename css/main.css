@@ -65,6 +65,15 @@ a:visited { color: #000; }
 	padding: .6em;
 }
 
+.summary p {
+  line-height: 1.3em;
+}
+
+.summary span {
+  font-size: .8em;
+  vertical-align: middle;
+}
+
 .back {
   font-size: .9em;
   float: right;
