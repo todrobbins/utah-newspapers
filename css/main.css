@@ -6,11 +6,23 @@ html {
 body {
 	max-width: 60em;
 	margin: 0 auto;
+  padding: 2em;
 }
 
 h1 {
 	margin-top: 1em;
 	margin-left: .5em;
+}
+
+h1 span {
+  padding-left: .5em;
+  font-size: .5em;
+  font-weight: 100;
+  vertical-align: middle;
+}
+
+section {
+	margin-left: 1em;
 }
 
 table {
@@ -39,12 +51,52 @@ tr:nth-child(2n) {
 	background: #eee;
 }
 
+iframe {
+  margin: 1em;
+}
+
+a:link { color: #000; }
+a:hover { color: #333; text-decoration: none; }
+a:visited { color: #000; }
+
+.summary {
+	background: ghostwhite;
+  border: 2px dotted #cee;
+	padding: .6em;
+}
+
+.back {
+  font-size: .9em;
+  float: right;
+  background: #cee;
+  padding: .6em;
+}
+
+.back:hover {
+  background: #aee;
+  cursor: pointer;
+}
+
+/* Media queries! */
+
 @media screen and (max-width: 640px) {
 	html {
 		font-size: 11px;
 	}
 
+  body {
+    padding: 1em;
+  }
+
 	h1 {
 		text-align: center;
 	}
+
+  section {
+    margin-left: 0;
+  }
+
+  .summary {
+    padding: .6em;
+  }
 }
