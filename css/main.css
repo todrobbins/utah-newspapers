@@ -14,11 +14,24 @@ h1 {
 	margin-left: .5em;
 }
 
+h1 a {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+h1 a:hover {
+  border: none;
+}
+
 h1 span {
   padding-left: .5em;
   font-size: .5em;
   font-weight: 100;
   vertical-align: middle;
+}
+
+ul {
+  line-height: 1.6em;
 }
 
 section {
@@ -45,6 +58,7 @@ th:hover {
 
 td {
 	padding: .6em;
+  line-height: 1.3em;
 }
 
 tr:nth-child(2n) {
@@ -55,8 +69,8 @@ iframe {
   margin: 1em;
 }
 
-a:link { color: #000; }
-a:hover { color: #333; text-decoration: none; }
+a:link { color: #000; text-decoration: none; border-bottom: 1px solid #000; }
+a:hover { color: #333; border: none; }
 a:visited { color: #000; }
 
 .summary {
@@ -87,21 +101,23 @@ a:visited { color: #000; }
 }
 
 .emailus {
-  font-size: .7em;
-  float: right;
+  font-size: 1em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  text-align: center;
   background: orange;
-  padding: .6em;
+  padding: 1em;
 }
 
 .emailus:hover {
-  border-bottom: 2px dotted #000;
+  color: #333;
 }
 
 /* Media queries! */
 
 @media screen and (max-width: 640px) {
 	html {
-		font-size: 11px;
+		font-size: 13px;
 	}
 
   body {
@@ -118,5 +134,9 @@ a:visited { color: #000; }
 
   .summary {
     padding: .6em;
+  }
+
+  td {
+    line-height: 17px;
   }
 }
