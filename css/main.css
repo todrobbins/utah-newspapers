@@ -51,6 +51,7 @@ th.header {
 	padding: .6em;
 	margin: 0;
 	border: 0;
+  transition: .3s all;
 }
 
 th:hover {
@@ -95,6 +96,7 @@ a:visited { color: #000; }
   float: right;
   background: #cee;
   padding: .6em;
+  transition: .3s all;
 }
 
 .back:hover {
@@ -107,15 +109,23 @@ a:visited { color: #000; }
   margin-top: 0em;
   margin-bottom: 2em;
   text-align: center;
-  background: orange;
+  background: #f5c272;
+  border: 1px dotted #fff;
   padding: 1em;
+  transition: .3s all;
 }
 
 .emailus:hover {
-  color: #333;
+  background: orange;
+  border: 1px dotted #f5c272;
 }
 
-#map { height: 280px; margin-left: 1.5em; }
+.leaflet-popup-content {
+  overflow: scroll;
+  max-height: 280px;
+}
+
+#map { height: 380px; margin-left: 1.5em; }
 
 /* Media queries! */
 
