@@ -3,9 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
-	<link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="../../css/main.css">
+  <style type="text/css">
+    #map { height: 380px; margin: 0 1.5em 0 1.5em; }
+    @media screen and (max-width: 640px) {
+        #map { height: 300px; margin: 0; }
+    }
+  </style>
 	<title>Utah Newspapers Data Viewer</title>
 </head>
 <body>
@@ -13,6 +21,8 @@
 	<h1>Utah Newspapers <span>Data Viewer</span></h1>
 
 	<!-- <input type="date" min="1850-01-01" max="1988-04-31"> -->
+
+  <div id="map"></div>
 
   <table cellspacing="0" cellpadding="0">
   <thead>
@@ -652,6 +662,13 @@
         widgets: ['zebra']
       }).tablesorterPager({container: $("#pager")}) 
 		});
+
+    var map = L.map('map').setView([40.7500,-111.8833], 7);
+
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/todrobbins.icbegkch/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18
+    }).addTo(map);
 	</script>
 </body>
 </html>

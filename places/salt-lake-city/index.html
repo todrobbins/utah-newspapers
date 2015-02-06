@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link rel="stylesheet" href="../../css/main.css">
   <title>Salt Lake City, Utah - Utah Newspapers Data Viewer</title>
 </head>
@@ -14,6 +16,9 @@
   <section class="summary">
     <p>Salt Lake City, often shortened to Salt Lake, or SLC is the capital and the most populous city in the state of Utah. <a href="https://en.wikipedia.org/wiki/Salt_Lake_City"><span>Wikipedia</span></a></p>
   </section>
+
+  <div id="map"></div>
+
   <section>
     <h2>Newspapers</h2>
     <ul>
@@ -30,5 +35,14 @@
     </ul>
   </section>
   <a href="../../"><span class="back">&larr; Back</span></a>
+
+  <script type="text/javascript">
+    var map = L.map('map').setView([40.7500,-111.8833], 12);
+
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/todrobbins.icbegkch/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18
+    }).addTo(map);
+  </script>
 </body>
 </html>

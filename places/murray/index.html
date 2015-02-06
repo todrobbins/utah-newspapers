@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link rel="stylesheet" href="../../css/main.css">
   <title>Murray, Salt Lake, Utah - Utah Newspapers Data Viewer</title>
 </head>
@@ -14,6 +16,7 @@
   <section class="summary">
     <p>Murray is a city situated on the Wasatch Front in the core of Salt Lake Valley in the U.S. state of Utah. Named for territorial governor Eli Murray, it is the state's fourteenth largest city. <a href="https://en.wikipedia.org/wiki/Murray,_Utah"><span>Wikipedia</span></a></p>
   </section>
+  <div id="map"></div>
   <section>
     <h2>Newspapers</h2>
     <ul>
@@ -22,5 +25,14 @@
     </ul>
   </section>
   <a href="../../"><span class="back">&larr; Back</span></a>
+
+    <script type="text/javascript">
+      var map = L.map('map').setView([40.6625,-111.8933], 13);
+
+      L.tileLayer('http://{s}.tiles.mapbox.com/v3/todrobbins.icbegkch/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          maxZoom: 18
+      }).addTo(map);
+    </script>
 </body>
 </html>
