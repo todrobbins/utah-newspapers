@@ -127,6 +127,30 @@ a:visited { color: #000; }
 
 #map { height: 380px; margin-left: 1.5em; }
 
+a[href^="http://chroniclingamerica"] {
+  background: url('../images/loc.png') center left no-repeat;
+  padding-left: 22px;
+  margin-left: 10px;
+}
+
+a[href^="http://digitalnewspapers"] {
+  background: url('../images/udn.png') center left no-repeat;
+  padding-left: 22px;
+  margin-left: 10px;
+}
+
+a[href^="https://en.wikipedia"] {
+  background: url('../images/wikipedia.png') center left no-repeat;
+  padding-left: 22px;
+  margin-left: 10px;
+}
+
+a[href^="http://chroniclingamerica"]:link,
+a[href^="http://digitalnewspapers"]:link,
+a[href^="https://en.wikipedia"]:link {
+  border: none;
+}
+
 /* Media queries! */
 
 @media screen and (max-width: 640px) {
