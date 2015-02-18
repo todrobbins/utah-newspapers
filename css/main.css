@@ -127,7 +127,7 @@ a:visited { color: #000; }
 
 #map { height: 380px; margin-left: 1.5em; }
 
-a[href^="http://chroniclingamerica"] {
+a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
   background: url('../images/loc.png') center left no-repeat;
   padding-left: 22px;
   margin-left: 10px;
