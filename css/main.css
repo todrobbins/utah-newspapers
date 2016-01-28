@@ -97,6 +97,7 @@ a:visited { color: #000; }
   background: #cee;
   padding: .6em;
   transition: .3s all;
+  margin-bottom: 3rem;
 }
 
 .back:hover {
