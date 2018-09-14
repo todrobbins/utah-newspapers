@@ -1,6 +1,7 @@
 html {
 	font-size: 18px;
 	font-family: Helvetica, Arial, sans-serif;
+	color: #333;
 }
 
 body {
@@ -16,7 +17,7 @@ h1 {
 
 h1 a {
   text-decoration: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #333;
 }
 
 h1 a:hover {
@@ -28,6 +29,12 @@ h1 span {
   font-size: .5em;
   font-weight: 100;
   vertical-align: middle;
+}
+
+h3.inline {
+	display: inline;
+	font-size: 1rem;
+	margin: .6rem;
 }
 
 ul {
@@ -72,8 +79,8 @@ iframe {
   margin: 1em;
 }
 
-a:link { color: #000; text-decoration: none; border-bottom: 1px solid #000; }
-a:hover { color: #333; border: none; }
+a:link { color: #333; text-decoration: none; border-bottom: 1px solid #333; }
+a:hover { color: #666; border: none; }
 a:visited { color: #000; }
 
 .summary {
@@ -152,6 +159,33 @@ a[href^="https://en.wikipedia"]:link {
   border: none;
 }
 
+.tags {
+	display: inline;
+	list-style: none;
+	-webkit-padding-start: 0;
+	margin: 0;
+}
+
+.tags li {
+	display: inline;
+	font-size: 1rem;
+	line-height: 3rem;
+	padding: .6em;
+	margin: .2rem;
+}
+
+.tags li:hover {
+	cursor: pointer;
+}
+
+.orgs li 					{ background: #faa; }
+.orgs li:hover 	 	{ background: #daa; }
+.people li 				{ background: #cee; }
+.people li:hover  { background: #aee; }
+.places li 				{ background: #fec; }
+.places li:hover  { background: #fdc; }
+
+
 /* Media queries! */
 
 @media screen and (max-width: 640px) {
@@ -160,16 +194,27 @@ a[href^="https://en.wikipedia"]:link {
 	}
 
   body {
-    padding: 1em;
+    padding: .6em;
   }
 
   table {
-    padding: 0;
+		padding: 0;
+  }
+
+	td {
+    line-height: 17px;
+		font-size: 11px;
   }
 
 	h1 {
 		text-align: center;
     margin-left: 0;
+		margin-bottom: 2rem;
+	}
+
+	h1 span {
+		display: block;
+		margin-top: .6em;
 	}
 
   section {
@@ -188,7 +233,15 @@ a[href^="https://en.wikipedia"]:link {
     margin: 0;
   }
 
-  td {
-    line-height: 17px;
-  }
+	/*a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
+	  background: none;
+	}
+
+	a[href^="http://digitalnewspapers"] {
+	  background: none;
+	}
+
+	a[href^="https://en.wikipedia"] {
+	  background: none;
+	}*/
 }
