@@ -7,7 +7,7 @@ html {
 body {
 	max-width: 60em;
 	margin: 0 auto;
-  padding: 2em;
+  padding: 0 2em 2em 2em;
 }
 
 h1 {
@@ -113,6 +113,7 @@ a:visited { color: #000; }
 }
 
 .emailus {
+  z-index: 999;
   font-size: 1em;
   margin-top: 0em;
   margin-bottom: 2em;
@@ -126,14 +127,26 @@ a:visited { color: #000; }
 .emailus:hover {
   background: orange;
   border: 1px dotted #f5c272;
+  color: #111;
 }
 
-.leaflet-popup-content {
-  overflow: scroll;
-  max-height: 280px;
+#map {
+    width: 1044px;
+    height: 500px;
+    margin: 0 2em 0 1.5em;
+  }
+  @media screen and (max-width: 640px) {
+    #map { height: 250px; margin: 0 0 2em 0; }
+  }
+
+.maplibregl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
-#map { height: 380px; margin-left: 1.5em; }
+.maplibregl-popup-content {
+  padding: 10px 24px !important;
+}
 
 a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
   background: url('../images/loc.png') center left no-repeat;
@@ -147,7 +160,8 @@ a[href^="http://digitalnewspapers"] {
   margin-left: 10px;
 }
 
-a[href^="https://en.wikipedia"] {
+a[href^="https://en.wikipedia"],
+a[href^="https://en.m.wikipedia"] {
   background: url('../images/wikipedia.png') center left no-repeat;
   padding-left: 22px;
   margin-left: 10px;
@@ -198,7 +212,8 @@ a[href^="https://en.wikipedia"]:link {
   }
 
   table {
-		padding: 0;
+		width: 100%;
+    padding: 0;
   }
 
 	td {
@@ -228,20 +243,3 @@ a[href^="https://en.wikipedia"]:link {
   .summary {
     padding: .6em;
   }
-
-  #map {
-    margin: 0;
-  }
-
-	/*a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
-	  background: none;
-	}
-
-	a[href^="http://digitalnewspapers"] {
-	  background: none;
-	}
-
-	a[href^="https://en.wikipedia"] {
-	  background: none;
-	}*/
-}
