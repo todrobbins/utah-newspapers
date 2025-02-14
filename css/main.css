@@ -148,6 +148,12 @@ a:visited { color: #000; }
   padding: 0 10px !important;
 }
 
+.maplibregl-popup-content p a strong {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px !important;
+}
+
 a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
   background: url('../images/loc.png') center left no-repeat;
   padding-left: 22px;
