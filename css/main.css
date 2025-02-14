@@ -145,7 +145,7 @@ a:visited { color: #000; }
 }
 
 .maplibregl-popup-content {
-  padding: 10px 24px !important;
+  padding: 0 10px !important;
 }
 
 a[href^="http://chroniclingamerica"], a[href^="loc.gov"] {
