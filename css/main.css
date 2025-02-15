@@ -39,7 +39,6 @@ h3.inline {
 
 ul {
   line-height: 1.6em;
-  -webkit-padding-start: 20px;
 }
 
 section {
@@ -154,29 +153,40 @@ a:visited { color: #000; }
   margin-bottom: 10px !important;
 }
 
-a[href^="https://chroniclingamerica"], a[href^="loc.gov"] {
-  background: url('../images/loc.png') center left no-repeat;
-  padding-left: 22px;
-  margin-left: 10px;
+a[href*="chroniclingamerica.loc.gov"],
+a[href*="loc.gov"]:link {
+  background: url(https://chroniclingamerica.loc.gov/media/img-std/fav.0537fd9021c6.ico) center left no-repeat;
 }
 
-a[href^="https://digitalnewspapers"] {
-  background: url('../images/udn.png') center left no-repeat;
-  padding-left: 22px;
-  margin-left: 10px;
+a[href*="digitalnewspapers.org"] {
+  background: url("../images/udn.png") center left no-repeat;
 }
 
-a[href^="https://en.wikipedia"],
-a[href^="https://en.m.wikipedia"] {
-  background: url('../images/wikipedia.png') center left no-repeat;
-  padding-left: 22px;
-  margin-left: 10px;
+a[href*="newspapers.com"] {
+  background: url(https://www.newspapers.com/apple-touch-icon-precomposed.png) center left no-repeat;
 }
 
-a[href^="https://chroniclingamerica"]:link,
-a[href^="https://digitalnewspapers"]:link,
-a[href^="https://en.wikipedia"]:link {
+a[href*="en.wikipedia.org"],
+a[href*="en.m.wikipedia.org"] {
+  background: url(https://en.m.wikipedia.org/static/favicon/wikipedia.ico) center left no-repeat;
+}
+
+a[href*="wikidata.org"] {
+  background: url(https://www.wikidata.org/static/favicon/wikidata.ico) center left no-repeat;
+}
+
+a[href*="chroniclingamerica.loc.gov"]:link,
+a[href*="digitalnewspapers.org"]:link,
+a[href*="newspapers.com"]:link,
+a[href*="en.wikipedia.org"]:link,
+a[href*="en.m.wikipedia.org"]:link,
+a[href*="wikidata.org"]:link {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
   border: none;
+  padding-left: 22px;
+  margin-left: 10px;
 }
 
 #tags {
@@ -248,10 +258,7 @@ a[href^="https://en.wikipedia"]:link {
     margin-left: 0;
   }
 
-  ul {
-    -webkit-padding-start: 15px;
-  }
-
   .summary {
     padding: .6em;
   }
+}
