@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.css' />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.tablesorter.js"></script> -->
     <script src='https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.js'></script>
     <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.css" rel="stylesheet" />
@@ -235,7 +234,7 @@
                 <th class="to-cell header">To</th>
             </tr>
         </thead>
-        <tbody> 
+        <tbody>
             <tr>
                 <td class="title-cell firstRow"><a href="newspapers/times-independent/">Times Independent</a></th>
                 <td class="city-cell"></td>
@@ -245,7 +244,7 @@
             </tr>
             <tr>
                 <td class="title-cell"><a href="newspapers/blanding-outlook/">Blanding Outlook</a></th>
-                <td class="city-cell"></td>
+                <td class="city-cell"><a href="places/blanding/">Blanding</a> <a href="https://en.m.wikipedia.org/wiki/Blanding,_Utah"></a></td>
                 <td class="county-cell"><a href="places/grand-county/">Grand</a> <a href="https://en.m.wikipedia.org/wiki/Grand_County,_Utah"></a></td>
                 <td class="from-cell">1919-09</td>
                 <td class="to-cell">1978-12</td>
@@ -857,11 +856,11 @@
     <script>
         window.addEventListener('load', function () {
             const el = document.getElementById('newspapers')
-            
+
             // const el = document.querySelector('.sortable th:first-child')
             // const el = document.querySelector('.sortable th:nth-child(2)')
             // const el = document.querySelectorAll('.sortable')[3].querySelector('th:nth-child(7)')
-            
+
             if (el) {
             el.click()
             }
