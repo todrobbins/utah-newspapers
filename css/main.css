@@ -117,15 +117,15 @@ a:visited { color: #000; }
   margin-top: 0em;
   margin-bottom: 2em;
   text-align: center;
-  background: #f5c272;
+  background: #cee;
   border: 1px dotted #fff;
   padding: 1em;
   transition: .3s all;
 }
 
 .emailus:hover {
-  background: orange;
-  border: 1px dotted #f5c272;
+  background: #eee;
+  border: 1px dotted #ddd;
   color: #111;
 }
 
@@ -154,8 +154,8 @@ a:visited { color: #000; }
 }
 
 a[href*="chroniclingamerica.loc.gov"],
-a[href*="loc.gov"]:link {
-  background: url(https://chroniclingamerica.loc.gov/media/img-std/fav.0537fd9021c6.ico) center left no-repeat;
+a[href*="loc.gov"] {
+  background: url("../images/loc.png") center left no-repeat;
 }
 
 a[href*="digitalnewspapers.org"] {
@@ -163,28 +163,30 @@ a[href*="digitalnewspapers.org"] {
 }
 
 a[href*="newspapers.com"] {
-  background: url(https://www.newspapers.com/apple-touch-icon-precomposed.png) center left no-repeat;
+  background: url("../images/newspapers.png") center left no-repeat;
 }
 
 a[href*="en.wikipedia.org"],
 a[href*="en.m.wikipedia.org"] {
-  background: url(https://en.m.wikipedia.org/static/favicon/wikipedia.ico) center left no-repeat;
+  background: url("../images/wikipedia.ico") center left no-repeat;
 }
 
 a[href*="wikidata.org"] {
-  background: url(https://www.wikidata.org/static/favicon/wikidata.ico) center left no-repeat;
+  background: url("../images/wikidata.ico") center left no-repeat;
 }
 
-a[href*="chroniclingamerica.loc.gov"]:link,
-a[href*="digitalnewspapers.org"]:link,
-a[href*="newspapers.com"]:link,
-a[href*="en.wikipedia.org"]:link,
-a[href*="en.m.wikipedia.org"]:link,
-a[href*="wikidata.org"]:link {
+a[href*="chroniclingamerica.loc.gov"],
+a[href*="loc.gov"],
+a[href*="digitalnewspapers.org"],
+a[href*="newspapers.com"],
+a[href*="en.wikipedia.org"],
+a[href*="en.m.wikipedia.org"],
+a[href*="wikidata.org"] {
   width: 20px;
   height: 20px;
   background-size: contain;
-  padding-left: 24px;
+  margin: 0 6px;
+  padding-left: 20px;
 }
 
 #tags {
@@ -210,6 +212,28 @@ a[href*="wikidata.org"]:link {
 
 .tags li:hover {
 	cursor: pointer;
+}
+
+.title-cell a {
+    font-style: italic;
+    margin-right: 4px;
+}
+
+.city-cell a,
+.county-cell a {
+    margin-right: 4px;
+}
+
+.summary a span,
+ul li a[href*="chroniclingamerica.loc.gov"]::before,
+ul li a[href*="loc.gov"]::before,
+ul li a[href*="digitalnewspapers.org"]::before,
+ul li a[href*="newspapers.com"]::before,
+ul li a[href*="en.wikipedia.org"]::before,
+ul li a[href*="en.m.wikipedia.org"]::before,
+ul li a[href*="wikidata.org"]::before {
+    content: "  ";
+    padding-left: 6px;
 }
 
 .orgs li 			{ background: #faa; }
